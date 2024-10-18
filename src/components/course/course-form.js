@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import DropzoneComponent from "react-dropzone-component";
 import { withRouter } from "react-router-dom";
 
-import "../../../node_modules/react-dropzone-component/dist/min/dropzone.min.css";
 import "../../../node_modules/react-dropzone-component/styles/filepicker.css";
+import "../../../node_modules/react-dropzone-component/node_modules/dropzone/dist/min/dropzone.min.css";
 
 import RichTextEditor from "../forms/rich-text-editor";
 import CourseFormFields from "../forms/course-form-fields";
