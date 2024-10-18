@@ -1,0 +1,32 @@
+.btn {
+    @include base-btn();
+    
+    &:disabled{
+        @include btn-save();
+    }
+}
+
+.btn-save {
+    @include btn-save();
+}
+
+.btn-back {
+    @include btn-back();
+}
+
+.btn-edit {
+    @include btn-edit();
+}
+
+.btn-active {
+    @include btn-save();
+    background-color: $blue;
+    &:hover {
+        background-color: $dark-blue; 
+    }
+}
+
+.btn-disabled {
+    background-color: $mediumgrey; 
+    cursor: pointer;
+}

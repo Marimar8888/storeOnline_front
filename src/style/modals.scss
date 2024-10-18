@@ -1,0 +1,147 @@
+.ReactModal__Content,
+.ReactModal__Content--after-open {
+  height: 80vh;
+  overflow: hidden !important;
+  z-index: 9999; 
+  max-width: 80%;
+}
+
+.errorText {
+  color: red;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.successText {
+  color: $dark-blue;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-align: center;
+  background-color: $offwhite;
+}
+
+
+/* -------------------- Modal aviso loguear ----------*/
+
+.Modal {
+  background: white;
+  border-radius: 4px;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.Overlay {
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998; 
+}
+
+.modal-notificacion-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .modal-notification-text {
+
+    h2 {
+      display: line;
+      color: $notificacion;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+  }
+}
+
+/*---------------- Modal create-edit course (course-form.js--------------------------*/
+
+.course-form-wrapper {
+  display: grid;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 20px;
+
+  .two-column {
+    @include base-grid;
+    @include input-element;
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .three-column {
+    @include input-element;
+    @include base-grid;
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
+  .one-column {
+
+    .DraftEditor-root {
+      border-radius: 3px;
+      border: 1px solid $offwhite;
+      padding: 10px;
+      margin-bottom: 20px;
+      min-height: 200px;
+    }
+
+    .rdw-image-modal {
+      left: -131px;
+    } 
+
+    .rdw-emoji-modal{
+      left: -88px;
+    }
+
+    .rdw-embedded-modal{
+      left: -43px;
+    }
+
+  }
+
+  .image-uploaders {
+    @include base-grid();
+    grid-template-columns: 180px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    .course-manager-image-wrapper{
+       width: 200px;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+    }
+      
+  }
+   
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .ReactModal__Content {
+    z-index: 1000; 
+  }
+}
+
+@media (max-width: 768px) {
+  .ReactModal__Content {
+    z-index: 1000; 
+  }
+}
+

@@ -1,0 +1,19 @@
+html body {
+    height: 100%; 
+    margin: 0px;
+    font-family: "Titillium Web", sans-serif;
+    height: 100vh;
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
